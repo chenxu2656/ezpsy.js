@@ -3,6 +3,10 @@ import * as ezUtil from './util/util'
 class EzpsyObj {
     id: string | number// generator random id for each element
     dom: HTMLElement
+    constructor(id,dom){
+        this.id= id
+        this.dom=dom
+    }
 }
 
 export interface EzpsyInitOption {
