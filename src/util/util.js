@@ -1,6 +1,3 @@
-"use strict";
-exports.__esModule = true;
-exports.randomId = void 0;
 var randomId = function () {
     var str = '1234567890qwertyuiopasdfghjklzxcvbnm';
     var strLength = str.length;
@@ -11,4 +8,4 @@ var randomId = function () {
     console.log(n);
     return n;
 };
-exports.randomId = randomId;
+export {randomId}
