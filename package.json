@@ -6,8 +6,8 @@
   "module": "dist/index.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
+    "build": "rm -rf dist/* && rollup -c",
+    "watch": "rm -rf dist/* && rollup -c -w",
     "publish": "npm publish"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "dist"
   ],
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
     "rollup": "^2.59.0"
   }
 }

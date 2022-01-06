@@ -1,12 +1,13 @@
+import typescript from '@rollup/plugin-typescript';
 export default{
-    input: "index.js",
+    input: "index.ts",
     output: [
     {
-        file: 'dist/ezpsy.js',
-        format: "cjs"
-    },
-    {
-        file: "lib/ezpsy"
+        file: 'dist/index.js',
+        format: "umd",
+        name: "EZPSY",
+        sourcemap: 'inline'
     }
-    ]
+    ],
+    plugins: [typescript()]
 }
