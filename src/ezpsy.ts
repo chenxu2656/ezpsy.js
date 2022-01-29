@@ -1,7 +1,7 @@
 
-import * as ezUtil from './util/util'
+import * as ezUtil from './util'
 
-export default class EZPSY {
+class EZPSY {
     private _id: string
     private _dom: HTMLElement 
     constructor(
@@ -17,3 +17,8 @@ export default class EZPSY {
         this._dom.appendChild(canvasDom)
     }
 }
+let hello = ()=>{
+    console.log('hello');
+    
+}
+export {EZPSY,hello}

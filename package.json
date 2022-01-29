@@ -16,7 +16,10 @@
     "dist"
   ],
   "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-typescript": "^8.3.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
     "rollup": "^2.59.0"
   }
 }
