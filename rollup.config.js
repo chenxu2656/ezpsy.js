@@ -1,14 +1,15 @@
 import typescript from '@rollup/plugin-typescript';
 import babel from '@rollup/plugin-babel';
 export default{
-    input: "index.ts",
+    input: "src/ezpsy.ts",
     output: [
     {
         file: 'dist/index.js',
         format: "esm",
         name: "ezpsy",
-        sourcemap: 'inline'
-    }
+        sourcemap: 'inline',
+        freeze: false
+    },
     ],
     plugins: [
         typescript(),

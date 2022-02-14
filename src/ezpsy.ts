@@ -1,18 +1,40 @@
 
-import * as ezUtil from './util'
+import * as util from './util'
 interface ezpsyInitOption{
     width?: number | string ,
     height?: number | string ,
-    backgroundColor?: string
+    backgroundColor?: string ,
+    fullScreen?: boolean | string
 }
-let init = (_dom: HTMLElement, _opts: ezpsyInitOption = {
-        backgroundColor: "white",
-        height: "500",
-        width: "500"
-    }) =>{
+export default class ezPsy{
+    /** init Dom */
+    node: HTMLElement;
+    /** width */
+    width?: string | number ;
+    /** height */
+    height?: string | number ;
+    /** background color */
+    backgroundColor?: string
+    /** fullscreen or not , priority > height&width */
+    fullScreen?: boolean | string;
+    constructor(node,options?:ezpsyInitOption){
+        const params = options ? options : {
+            width: "500px",
+            height: "100px",
+            fullScreen: false,
+            backgroundColor: "#ffffff"
+        }
+        // this.node = node
+        this.width = params.width
+        this.height = params.height
+        this.backgroundColor = params.backgroundColor
+        this.fullScreen = params.fullScreen
+    }
+
+    init(_dom: HTMLElement, _opts: ezpsyInitOption){
         let ez = document.createElement('canvas')
-        ez.id = ezUtil.randomId()
-        const domStyle = ezUtil.getStyle(_dom)
+        ez.id = util.randomId()
+        const domStyle = util.getStyle(_dom)
         console.log(domStyle);
         
         ez.style.width = _opts?.width ? `${_opts.width}px` : domStyle['width']
@@ -20,9 +42,5 @@ let init = (_dom: HTMLElement, _opts: ezpsyInitOption = {
         ez.style.backgroundColor = _opts?.backgroundColor
         _dom.appendChild(ez)
         return ez
+    }   
 }
-let hello = ()=>{
-    console.log('hello');
-    
-}
-export {init , hello}
