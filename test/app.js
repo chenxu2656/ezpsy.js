@@ -1,11 +1,10 @@
 import ezPsy from "../dist/index.js"
-let canvasStyle = {
+const canvasStyle = {
     backgroundColor: "black",
-    width: "60"
+    width: "60",
+    // height: "60"
 }
-let test = ezPsy.hello
-test()
-let dom1 = document.querySelector('#dom1')
-let dom2 = ezPsy.init(dom1,canvasStyle)
+let canvasDom = document.querySelector('#container')
+let dom2 = ezPsy.init(canvasDom,canvasStyle)
 console.log(dom2);
 // console.log(ezPsy.hello);
