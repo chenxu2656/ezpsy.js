@@ -19,4 +19,5 @@ let randomId = function () {
 let endWith = function(str:string){
     
 }
+let fullScreen
 export {randomId}

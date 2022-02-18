@@ -29,9 +29,11 @@ export default class ezPsy{
         this.height = params.height
         this.backgroundColor = params.backgroundColor
         this.fullScreen = params.fullScreen
+        node.appendChild()
     }
 
-    init(_dom: HTMLElement, _opts: ezpsyInitOption){
+    init(_dom: HTMLElement){
+        if()
         let ez = document.createElement('canvas')
         ez.id = util.randomId()
         const domStyle = util.getStyle(_dom)
